@@ -1,6 +1,7 @@
 
 package com.example.repository;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Map;
@@ -31,12 +32,25 @@ public class IssueInfoRepository {
 		
 		try {
 		
-			System.out.println("cinfug,ymlを読込みます");
+			System.out.println("config,yamlを読込みます");
 			
 			// load config file
 			resourceLoader = new DefaultResourceLoader();
-			Resource resource = resourceLoader.getResource("config.yaml");
+			
+			// 実行可能jarにして配布する場合
+			Resource resource = resourceLoader.getResource("file:./config.yaml");
+			// STS上で実行する場合
+			//Resource resource = resourceLoader.getResource("config.yaml");
+			
 			reader = new InputStreamReader(resource.getInputStream());
+			
+			/*
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(
+							ClassLoader.getSystemResourceAsStream("config.yaml")
+							)
+					);
+			*/
 			
 			Yaml yaml = new Yaml();
 			Map<String,Object> config = (Map)((Map)yaml.load(reader)).get("config");
@@ -44,7 +58,7 @@ public class IssueInfoRepository {
 			Map<String,Object> common = (Map)config.get("common");
 			Map<String,Object> particular = (Map)config.get("particular");		
 			
-			System.out.println("cinfug,ymlを読込みました");
+			System.out.println("config,yamlを読込みました");
 			
 			// set common parameter
 			issueInfo.setBaseUri( common.get("baseUri").toString() );
