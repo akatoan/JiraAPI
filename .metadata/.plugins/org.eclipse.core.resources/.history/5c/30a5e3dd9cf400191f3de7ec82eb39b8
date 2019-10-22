@@ -1,0 +1,47 @@
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.domain.IssueInfo;
+import com.example.repository.IssueInfoRepository;
+import com.example.repository.JiraOperationRepository;
+
+@Service
+public class CreateIssueService {
+	
+	@Autowired
+	IssueInfoRepository issueInfoRepository;
+	
+	@Autowired
+	JiraOperationRepository jiraOperationRepository;
+	
+	public String createIssueByGet(
+			String projectKey,
+			String issueId
+			)
+	{	
+		
+		// get issue information
+		IssueInfo issueInfo = issueInfoRepository.getIssueInfo(projectKey, issueId);
+		
+		// create post header
+		try {
+			
+			String results = jiraOperationRepository.callWebAPI(issueInfo);
+			
+		} catch (Exception e){
+			
+		}
+		
+		// create post body
+		
+		return results;
+	}
+	
+	
+	public String postItem() {
+		return "POSTメソッド成功!";
+	}
+	
+}

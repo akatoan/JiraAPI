@@ -1,0 +1,23 @@
+package com.example.domain;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Data
+public class IssueInfo implements Serializable{
+
+	private Integer id;
+	private String title;
+	private Integer price;
+	private Date date;
+	
+}

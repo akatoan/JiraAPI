@@ -1,0 +1,8 @@
+setting:
+  jiraInfo:
+    rri: https://akatoan.atlassian.net
+    userId: fujiinot
+    password: Password
+  issueInfo:
+    summary: TEST
+    

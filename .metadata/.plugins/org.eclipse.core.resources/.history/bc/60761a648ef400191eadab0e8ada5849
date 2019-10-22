@@ -1,0 +1,8 @@
+setting:
+  JiraInfo:
+    URI: https://akatoan.atlassian.net
+    userID: fujiinot
+    password: Password
+  IssueInfo:
+    summary: TEST
+    

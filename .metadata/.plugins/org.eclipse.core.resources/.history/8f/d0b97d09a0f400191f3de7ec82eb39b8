@@ -1,0 +1,36 @@
+package com.example.api;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.domain.IssueInfo;
+import com.example.service.CreateIssueService;
+
+@RestController
+@RequestMapping(value = "/api/create/issue/project/{projectKey}/issue/{issueId}")
+public class CreateIssueController {
+	
+	@Autowired
+	CreateIssueService createIssueService;
+	
+    @GetMapping
+    public IssueInfo getItem(
+    		@PathVariable("projectKey") String projectKey,
+    		@PathVariable("issueId") String issueId
+    		)
+    {
+    	String results = createIssueService.createIssueByGet(projectKey, issueId);
+    	return results;
+    }
+        
+    @PostMapping
+    public String postItem() {
+    	String msg = createIssueService.postItem();
+    	return msg;
+    }
+    
+}
