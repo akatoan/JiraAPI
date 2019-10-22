@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="okhttp3.RequestBody"/>
 <fullyQualifiedTypeName name="okhttp3.Request"/>
 <fullyQualifiedTypeName name="okhttp3.OkHttpClient"/>
@@ -34,4 +33,5 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
 <fullyQualifiedTypeName name="com.example.domain.IssueInfo"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 </qualifiedTypeNameHistroy>
