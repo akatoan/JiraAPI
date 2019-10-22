@@ -1,0 +1,8 @@
+setting:
+  common:
+    baseUri: "https://akatoan.atlassian.net"
+    userId: "n.minoriefeden.f@gmail.com"
+    password: "subetet8kiaval8n"
+  particular:
+    summary: "restAPIによる課題の自動作成テスト"
+    
