@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-10-22T17:47:56Z</updated>
+  <updated>2019-10-22T17:47:00Z</updated>
   <entry>
     <title>The Reactive Revolution at SpringOne Platform 2019 (part 2/N)</title>
     <link rel="alternate" href="https://spring.io/blog/2019/10/22/the-reactive-revolution-at-springone-platform-2019-part-2-n" />
@@ -14,9 +14,9 @@
       <name>Josh Long</name>
     </author>
     <id>tag:spring.io,2019-10-22:3845</id>
-    <updated>2019-10-22T17:47:56Z</updated>
+    <updated>2019-10-22T17:47:00Z</updated>
     <content type="html">&lt;p&gt;Last year right in the middle of SpringOne Platform 2018, I posted the &lt;a href="https://spring.io/blog/2018/09/27/the-reactive-revolution-at-springone-platform-2018-part-1-n"&gt;first post in this series, _ The Reactive Revolution at SpringOne Platform 2018 (part 1/N)_&lt;/a&gt;, which looked at some of the big features we&amp;rsquo;d just dropped at SpringOne Platform 2018. I wanted to follow up and revisit that blog and the concepts I&amp;rsquo;d introduced last year, and show just how far we&amp;rsquo;ve come in the intervening year. TL;DR: things are &lt;em&gt;much&lt;/em&gt; easier! &lt;/p&gt;&lt;h2&gt;&lt;a href="#r2dbc" class="anchor" name="r2dbc"&gt;&lt;/a&gt;R2DBC&lt;/h2&gt;
-&lt;p&gt;Last year, we announced our work on trying to support a standard for reactive SQL data access with a new project called &lt;a href="http://r2dbc.io"&gt;R2DBC&lt;/a&gt;. Traditional approaches to SQL data access on the JVM, like JDBC, are blocking APIs. They monopolize threads to do their work and negate the scalability benefits of a reactive platfrom like Spring. We wanted to improve that situation for developers so we built R2DBC. R2DBC has now been out in the public for more than a year and was developed internally for about as long internally before that. We&amp;rsquo;ve just reached the 0.0.8 release. We&amp;rsquo;re nearing a GA release. I&amp;rsquo;m not sure when, but I reckon we&amp;rsquo;ll have a majority of the features most developers need in a possibly GA, but-not-yet-1.0, release. Things like stored procedures might be released later.&lt;/p&gt;
+&lt;p&gt;Last year, we announced our work on trying to support a standard for reactive SQL data access with a new project called &lt;a href="http://r2dbc.io"&gt;R2DBC&lt;/a&gt;. Traditional approaches to SQL data access on the JVM, like JDBC, are blocking APIs. They monopolize threads to do their work and negate the scalability benefits of a reactive platform like Spring. We wanted to improve that situation for developers so we built R2DBC. R2DBC has now been out in the public for more than a year and was developed internally for about as long internally before that. We&amp;rsquo;ve just reached the 0.0.8 release. We&amp;rsquo;re nearing a GA release. I&amp;rsquo;m not sure when, but I reckon we&amp;rsquo;ll have a majority of the features most developers need in a possibly GA, but-not-yet-1.0, release. Things like stored procedures might be released later.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;ve made a ton of progress since last year. There are now a good many different implementations (some available and some under active development) from various vendors supporting R2DBC-based data access, including PostgresSQL, MySQL, Google Cloud Spanner, H2, Microsoft SQL Server, and more. &lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s also &lt;em&gt;way&lt;/em&gt; easier to get started. Simply visit my secon favorite place on the internet, &lt;em&gt;after production&lt;/em&gt;, &lt;a href="http://start.Spring.io/"&gt;the Spring Initializr&lt;/a&gt;, and choose &lt;code&gt;R2DBC&lt;/code&gt; and choose &lt;code&gt;PostgresSQL&lt;/code&gt;. Click &lt;code&gt;Generate&lt;/code&gt;. The resulting archive will be almost ready-to-run. You&amp;rsquo;ll need to specify connection information, but as with all Spring Boot autoconfiguration, such details are best handled outside of the Java code. You could handle it in the environment, &lt;code&gt;-D&lt;/code&gt; arguments, and in the property files. Here&amp;rsquo;s what that looks like for me, in &lt;code&gt;src/main/resources/application.properties&lt;/code&gt;. &lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint"&gt;spring.r2dbc.url=r2dbc:postgres://localhost/orders&#xD;
@@ -96,7 +96,7 @@ class TransactionConfiguration {&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In the comments for the article, someobdy asked about whether anybody is talking to Jakarta EE about all of this. I mentioned the (now defunct) ADBA project. R2DBC is now the best bet for getting reactive SQL-data access working. I hope you&amp;rsquo;ll give it a shot, kick the tires, and feedback! &lt;/p&gt;&lt;h2&gt;&lt;a href="#rsocket-the-reactive-wire-protocol" class="anchor" name="rsocket-the-reactive-wire-protocol"&gt;&lt;/a&gt;RSocket: the reactive wire protocol&lt;/h2&gt;
-&lt;p&gt;Last year, we also debuted our support for RSocket, a protocol developed by - among others - folks from Netflix who have since moved to Facebook. RSocket is a wire protocol that surfaces the tenants of reactive processing as part of the protocol itself. Facebook have developed different RSocket clients supporting, for example, C++ and Java. The Java RSocket client builds upon &lt;a href="http://ProjectReactor.io"&gt;the Reactor project&lt;/a&gt;! RSocket is a binary protocol, though, so in theory you could build clients in other languages, as well.&lt;/p&gt;
+&lt;p&gt;Last year, we also debuted our support for RSocket, a protocol developed by - among others - folks from Netflix (who have since moved to Facebook) and Netifi. RSocket is a wire protocol that surfaces the tenants of reactive processing as part of the protocol itself. Facebook have developed different RSocket clients supporting, for example, C++ and Java. The Java RSocket client builds upon &lt;a href="http://ProjectReactor.io"&gt;the Reactor project&lt;/a&gt;! RSocket is a binary protocol, though, so in theory you could build clients in other languages, as well.&lt;/p&gt;
 &lt;p&gt;RSocket is a general purpose data conveyance protocol. It&amp;rsquo;s payload agnostic. It doesn&amp;rsquo;t care what you send across the wire. It&amp;rsquo;s also built for operations! It&amp;rsquo;s even got a dedicate message frame in the protocol to convey information like service health and uptime. It supports a number of message exchange patterns or styles including, but not limited to, request-response, fire-and-forget, publish-subscribe and streaming. The skyÅfs the limit! This post couldnÅft hope to thoroughly introduce all of the options, so letÅfs look at a simple streaming example that has two components, a producer and a consumer. In order to get this to work, I went to the Spring Initializr, selected &lt;code&gt;Lombok&lt;/code&gt; and &lt;code&gt;RSocket&lt;/code&gt;. I did this twice, one for a producer and another for a consumer. Let&amp;rsquo;s look at that.&lt;/p&gt;
 &lt;p&gt;You&amp;rsquo;ll need to provide sme configuration, as before, in &lt;code&gt;src/main/resources/application.properties&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint"&gt;spring.rsocket.server.port=7777
@@ -124,7 +124,7 @@ public class RsocketServiceApplication {&#xD;
 }&#xD;
 &#xD;
 @Controller&#xD;
-class IntervalController {&#xD;
+class GreetingsController {&#xD;
 &#xD;
 	@MessageMapping(&amp;quot;intervals&amp;quot;)&#xD;
 	Flux&amp;lt;GreetingResponse&amp;gt; interval(GreetingRequest request) {&#xD;
@@ -149,8 +149,8 @@ class GreetingResponse {&#xD;
 }&#xD;
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Much better than the code from last year! It&amp;rsquo;s functinoally equivalent, but it does one more interesting things, like marshal an object instead of a mere &lt;code&gt;String&lt;/code&gt;. Remember, RSocket connections are multiplexed, stateful, long-lived connections. You can open a connection and reuse it to handle multiple requests. They might disconnect, and it&amp;rsquo;s up to you to put in retry logic there. This has a profound effect on speed; you wouldn&amp;rsquo;t beleive how much time is spent connneting and disconnecting in typical HTTP! &lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s look at the client, something to consume the interval service. Go to the Sprign Initializer, start a new project, choosing the same dependencies as before and varying only the project name.&lt;/p&gt;
+&lt;p&gt;Much better than the code from last year! It&amp;rsquo;s functionally equivalent, but it does one more interesting things, like marshal an object instead of a mere &lt;code&gt;String&lt;/code&gt;. Remember, RSocket connections are multiplexed, stateful, long-lived connections. You can open a connection and reuse it to handle multiple requests. They might disconnect, and it&amp;rsquo;s up to you to put in retry logic there. This has a profound effect on speed; you wouldn&amp;rsquo;t believe how much time is spent connecting and disconnecting in typical HTTP! &lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s look at the client, something to consume the Greetings service. Go to the Spring Initializer, start a new project, choosing the same dependencies as before and varying only the project name.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint"&gt;package com.example.rsocketclient;&#xD;
 &#xD;
 import lombok.*;&#xD;
