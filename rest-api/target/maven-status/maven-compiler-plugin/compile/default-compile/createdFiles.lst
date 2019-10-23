@@ -1,0 +1,6 @@
+com\example\repository\IssueInfoRepository.class
+com\example\repository\JiraOperationRepository.class
+com\example\RestApiApplication.class
+com\example\api\CreateIssueController.class
+com\example\domain\IssueInfo.class
+com\example\service\CreateIssueService.class
