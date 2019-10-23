@@ -3844,3 +3844,15 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag nam
 2019-10-23 04:07:54,858 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
 2019-10-23 04:07:54,942 [Worker-55: Launching rest-api] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\ntkfj\LocalGitRepository\JiraAPI\rest-api
 2019-10-23 04:07:54,942 [Worker-55: Launching rest-api] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B clean dependency:copy-dependencies -DoutputDirectory=lib package
+2019-10-23 11:33:13,408 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-10-23 11:33:29,640 [Worker-15: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:rest-api:0.0.1-SNAPSHOT @ C:\Users\ntkfj\LocalGitRepository\JiraAPI\rest-api\pom.xml.
+2019-10-23 11:33:30,550 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-23 11:33:30,557 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2019-10-23 11:33:30,563 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource to ..
+2019-10-23 11:33:30,567 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-23 11:33:30,567 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ntkfj\LocalGitRepository\JiraAPI\rest-api\src\test\resources
+2019-10-23 11:33:39,627 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-23 11:33:39,629 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-10-23 11:33:39,630 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource to ..
+2019-10-23 11:33:39,632 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-23 11:33:39,632 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ntkfj\LocalGitRepository\JiraAPI\rest-api\src\test\resources
