@@ -1,8 +1,0 @@
-setting:
-  common:
-    baseUri: "http://localhost:8090"
-    userId: "fujiinot"
-    password: "Password"
-  particular:
-    summary: "restAPIによる課題の自動作成テスト"
-    
