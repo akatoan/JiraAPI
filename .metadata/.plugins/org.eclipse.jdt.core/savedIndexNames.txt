@@ -29,7 +29,6 @@ INDEX VERSION 1.131+C:\Users\ntkfj\LocalGitRepository\JiraAPI\.metadata\.plugins
 2736697639.index
 4113072523.index
 3963440073.index
-4139695451.index
 1767855433.index
 1910041241.index
 1740866407.index
@@ -46,10 +45,8 @@ INDEX VERSION 1.131+C:\Users\ntkfj\LocalGitRepository\JiraAPI\.metadata\.plugins
 311514108.index
 359213107.index
 2328527266.index
-1449203917.index
 3613760596.index
 3908061679.index
-4033460148.index
 4029164763.index
 3295419645.index
 4096038355.index
@@ -60,7 +57,6 @@ INDEX VERSION 1.131+C:\Users\ntkfj\LocalGitRepository\JiraAPI\.metadata\.plugins
 3606094141.index
 3364865639.index
 1100163301.index
-3611990986.index
 159419129.index
 794941355.index
 416869917.index
