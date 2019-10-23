@@ -1,0 +1,9 @@
+config:
+  common:
+    baseUri: "http://localhost:8090"
+    userId: "usernId"
+    password: "password"
+  particular:
+    projectKey: "projectKey"
+    issueTypeId: "10001"
+    summary: "Review: "

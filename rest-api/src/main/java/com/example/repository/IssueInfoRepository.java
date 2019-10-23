@@ -38,9 +38,9 @@ public class IssueInfoRepository {
 			resourceLoader = new DefaultResourceLoader();
 			
 			// 実行可能jarにして配布する場合
-			Resource resource = resourceLoader.getResource("file:./config.yaml");
+			 Resource resource = resourceLoader.getResource("file:./config.yaml");
 			// STS上で実行する場合
-			//Resource resource = resourceLoader.getResource("config.yaml");
+			// Resource resource = resourceLoader.getResource("subres/config.yaml");
 			
 			reader = new InputStreamReader(resource.getInputStream());
 			

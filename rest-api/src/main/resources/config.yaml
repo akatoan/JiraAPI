@@ -1,9 +1,9 @@
 config:
   common:
     baseUri: "http://localhost:8090"
-    userId: "usernId"
-    password: "password"
+    userId: "fujiinot"
+    password: "Password"
   particular:
-    projectKey: "projectKey"
+    projectKey: "REVRSLTS"
     issueTypeId: "10001"
     summary: "Review: "

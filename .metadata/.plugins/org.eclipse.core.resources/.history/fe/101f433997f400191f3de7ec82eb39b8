@@ -1,8 +1,0 @@
-setting:
-  common:
-    uri: "https://akatoan.atlassian.net"
-    userId: "fujiinot"
-    password: "Password"
-  particular:
-    summary: "TEST"
-    
