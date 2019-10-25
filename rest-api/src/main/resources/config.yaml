@@ -1,9 +1,9 @@
 config:
   common:
-    baseUri: "http://localhost:8090"
-    userId: "fujiinot"
+    baseUri: "JIRA BASE URI"
+    userId: "UserId"
     password: "Password"
   particular:
-    projectKey: "REVRSLTS"
+    projectKey: "Project Key"
     issueTypeId: "10001"
-    summary: "Review: "
+    summary: "Auto-Created: "
