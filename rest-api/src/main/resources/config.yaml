@@ -1,7 +1,7 @@
 config:
   common:
-    baseUri: "http://localhost:8090"
-    userId: "fujiinot"
+    baseUri: "JIRA BASE URI"
+    userId: "UserId"
     password: "Password"
     sprintFieldName: "customfield_10104"
   particular:
@@ -9,4 +9,3 @@ config:
     boardId: "2"
     issueTypeId: "10001"
     summary: "Review: "
-
