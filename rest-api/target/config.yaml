@@ -3,7 +3,10 @@ config:
     baseUri: "http://localhost:8090"
     userId: "fujiinot"
     password: "Password"
+    sprintFieldName: "customfield_10104"
   particular:
     projectKey: "REVRSLTS"
+    boardId: "2"
     issueTypeId: "10001"
     summary: "Review: "
+
