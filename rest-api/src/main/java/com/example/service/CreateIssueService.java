@@ -37,7 +37,10 @@ public class CreateIssueService {
 		try {
 			
 			// get summary for the issueKey
-			issueInfo = jiraOperationRepository.searchIssueAPI(issueInfo);
+			issueInfo = jiraOperationRepository.getIssueInfoAPI(issueInfo);
+			
+			// get summary for the issueKey
+			issueInfo = jiraOperationRepository.getActiveSprintAPI(issueInfo);			
 			
 			// create an issue according to issueInfo
 			results = jiraOperationRepository.createIssueAPI(issueInfo);
